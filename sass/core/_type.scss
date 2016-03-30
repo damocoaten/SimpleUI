@@ -1,0 +1,19 @@
+body {
+    color: $mainText;
+    font-family: lato;
+}
+h1, h2, h3, p {
+    margin-bottom: 0;
+}
+h1, h2, h3 {
+    color: $headings;
+}
+h1 {
+  font-size: 4.5vw;
+}
+h2 {
+  font-size: 2.0vw;
+}
+p {
+  font-size: 1.5vw;
+}
