@@ -1,0 +1,27 @@
+.testimony {
+    background: url('../images/testi-bg.png') 20% 57%;
+    height: 100%;
+
+    &-quote {
+        display: block;
+        margin: 0 auto -10px;
+        max-width: 65%;
+        padding-top: 30px;
+        text-align: center;
+        @include bp(mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &-name {
+        @extend .testimony-quote;
+        left: 55px;
+        margin: 0 auto 30px;
+        @include bp(tablet) {
+            left: 0;
+        }
+        @include bp(mobile) {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,216 @@
+.nav {    
+    background-color: $blu;
+    box-shadow: 0px 1px 5px $blk;
+    width: 100%;
+    z-index: 999;
+
+    &-ul {
+        height: 100%;
+        width: 100%;
+        -o-transition: max-height .23s ease-out;
+        -moz-transition: max-height .23s ease-out;
+        -webkit-transition: max-height .23s ease-out;
+        transition: max-height .23s ease-out;
+    }
+
+    &-li {
+        display: inline-block;
+        width: calc(100%/6.1);
+        @include bp(tablet) {
+            width: calc(100%/5.1);
+        }        
+    }
+
+    &-a {
+        color: $w;
+        display: block;
+        font-size: 19px;
+        padding: 7px 0;
+        text-align: center;
+        text-decoration: none;
+        -o-transition: all .16s ease-out;
+        -moz-transition: all .16s ease-out;
+        -webkit-transition: all .16s ease-out;
+        transition: all .16s ease-out;
+        &:hover {
+            background-color: darken($blu,5%);
+        }
+    }
+
+    &::after {
+        clear: both;
+    }
+
+    &-top {
+        overflow: hidden;
+        width: 100%;
+
+        &-logo {
+            margin: 30px 0 10px;
+            width: 200px;
+
+            @include bp(tablet) {
+                margin: 10px 0 10px 10px;
+            }
+
+            @include bp(mobile) {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    }
+
+    &-hide {
+        @include bp(tablet) {
+            display: none;
+        }
+    }
+}
+
+.sub {
+    background-color: $blu;    
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 37px;
+    -o-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    opacity: 0;
+    width: 100%;
+    z-index: 1000;
+
+    .nav-li:hover & {
+        height: auto;
+        max-height: 200em;    
+        opacity: 1;    
+    }
+    
+    &-li {
+        width: 100%;
+    }
+
+    &-a {
+        color: $w;
+        display: block;
+        font-size: 19px;
+        padding: 7px 0;
+        text-align: center;
+        text-decoration: none;
+        &:hover {
+            background-color: darken($blu,5%);
+        }
+    }
+}
+
+.top {
+    background-color: rgba($blk, .6);
+    max-height: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    -o-transition: all .16s ease-out;
+    -moz-transition: all .16s ease-out;
+    -webkit-transition: all .16s ease-out;
+    transition: all .16s ease-out;
+    width: 100%;
+    z-index: 99;
+
+    @include bp(tablet) {
+        display: none;
+    }
+
+    &:hover {
+        background-color: rgba($blk, .8);
+        max-height: 128px;
+    }
+
+    .wrap {
+        overflow: hidden;
+    }
+
+    &-link {
+        color: $w;
+        float: right;
+        padding: 0 25px;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            background-color: rgba($blk, .6);
+        }
+        & p {
+            font-size: 16px;
+        }
+        & img {
+            width: 130px;
+            margin-bottom: 26px;
+        }
+    }
+}
+
+#menuOpen, #menuClose {
+    cursor: pointer;
+    background: $blu url('/Content/images/menuOpen.png') no-repeat center;
+    background-size: 16px;
+    display: none;
+    float: left;
+    height: 36px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    
+}
+
+@media screen and(max-width: 850px) {
+    #menuOpen {
+        display: block;
+        width: 100%;
+    }
+
+    .nav {
+        .wrap {
+            height: 100%;
+        }
+
+        &-ul {
+            position: absolute;
+            max-height: 0;
+            overflow: hidden;
+            top: 36px;
+        }
+
+        &-li {
+            background-color: $blu;
+            display: block;
+            float: none;
+            width: 100%;
+        }
+    }
+}
+
+#menuClose {
+    background-image: url('/Content/images/menuClose.png');
+}
+
+.nav-open {
+    height: auto;
+    max-height: 1200em;
+    overflow: visible;
+
+    .nav-li {
+        height: 100%;
+        overflow: visible;
+        padding: 0;
+    }
+
+    #menuOpen {
+        width: 0;
+    }
+
+    #menuClose {
+        width: $let*2em;
+    }
+}

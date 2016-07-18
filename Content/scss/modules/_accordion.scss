@@ -1,0 +1,32 @@
+.accordion {
+    margin-bottom: 30px;
+    
+    &-link {
+        background-color: lighten($secondary,40%);
+        border-bottom: 1px solid $w;
+        cursor: pointer;
+        padding: 10px 20px;
+        -o-transition: all .16s ease-in-out;
+        -moz-transition: all .16s ease-in-out;
+        -webkit-transition: all .16s ease-in-out;
+        transition: all .16s ease-in-out;
+        width: 100%;
+
+        &:hover {
+            padding-left: 30px;
+        }
+        
+        & h4 {
+            margin: 0;
+        }
+    }
+
+    &-content {
+        border: 1px solid lighten($secondary,40%);
+        border-top: none;
+        padding: 10px 20px;
+    }
+    &-active {
+        padding-left: 30px;
+    }
+}

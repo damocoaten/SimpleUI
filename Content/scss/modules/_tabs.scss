@@ -1,0 +1,39 @@
+.tabs {
+    width: 100%;
+
+    &-links {
+        border-bottom: 2px solid $secondary;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 15px;
+        width: 100%;
+        &-li {
+            background-color: lighten($secondary, 40%);
+            border: 2px solid $secondary;
+            border-bottom: none;
+            border-radius: 3px 3px 0 0;
+            float: left;
+            margin-right: 5px;
+            padding: 5px 0;
+            -o-transition: all .16s ease-out;
+            -moz-transition: all .16s ease-out;
+            -webkit-transition: all .16s ease-out;
+            transition: all .16s ease-out;
+
+            &:hover {
+                background-color: lighten($secondary, 30%);
+            }
+
+            & a {
+                color: $blk;
+                font-weight: bold;
+                text-decoration: none;
+                padding: 5px 25px;
+            }
+        }
+    }
+    &-active {
+        background-color: lighten($secondary, 20%);
+        padding-bottom: 5px;
+    }
+}

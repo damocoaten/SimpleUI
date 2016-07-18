@@ -1,0 +1,65 @@
+.footer {
+    color: $w;
+    background-color: $footerLower;
+    overflow: hidden;
+
+    &-links {
+        display: block;
+        background-color: $footerUpper;
+        padding: 40px 0;
+        overflow: hidden;
+        width: 100%;
+
+        @include bp(tablet) {
+            display: none;
+        }
+
+        & a {
+            border-bottom: 1px solid #005165;
+            color: $w;
+            display: block;
+            font-weight: bold;
+            padding: 5px 0 5px 5px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #005165;
+            }
+        }
+    }
+
+    &-logo {
+        padding: 15px 0 35px;
+        width: 175px;
+
+        @include bp(mobile) {
+            display: block;
+            margin: 15px auto;
+            padding: 0;
+        }
+    }
+
+    &-sm-text {
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    } 
+
+    &-nm-text {
+        padding: 0 0 10px;
+        margin: 0;
+
+        @include bp(mobile) {
+            text-align: center;
+        }
+    }
+
+    &-push {
+        padding: 15px 0;
+    }   
+
+    & h3 {
+        color: $org;
+    }
+}

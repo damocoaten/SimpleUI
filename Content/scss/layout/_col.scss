@@ -1,0 +1,105 @@
+.main {
+    display: block;
+    margin: 0;
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+.sec {
+    border-bottom: 1px solid $gry;
+    padding: 0 0 10px 0;
+    margin-bottom: 15px;
+    overflow: hidden;    
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: $siteWidth;
+}
+
+.clear-col, .two-col, .three-col, .four-col, .two-three-col, .three-four-col {
+    display: block;
+    float: left;
+    padding: 0 10px 10px 0;
+
+    @include bp(tablet) {
+        padding: 10px;
+    }
+}
+
+.clear-col {
+    display: block;
+    width: 100%;
+}
+
+.two-col {
+    width: calc(100%/2);
+
+    @include bp(tablet) {
+        width: 100%;
+    }
+}
+
+.three-col {
+    width: calc(100%/3);
+
+    @include bp(mobile) {
+        width: 100%;
+    }
+}
+
+.four-col {
+    width: calc(100%/4);
+
+    @include bp(tablet) {
+        width: 50%;
+    }
+
+    @include bp(mobile) {
+        width: 100%;
+    }
+}
+
+.two-three-col {
+    width: calc((100%/3)*2);
+
+    @include bp(tablet) {
+        width: 100%;
+    }
+}
+
+.three-four-col {
+    width: calc((100%/4)*3);
+
+    @include bp(tablet) {
+        width: 100%;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.noPad {
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.tab-hide {
+    @include bp(tablet) {
+        display: none;
+    }
+}
+
+.mob-hide {
+    @include bp(mobile) {
+        display: none;
+    }
+}

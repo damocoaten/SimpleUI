@@ -1,0 +1,33 @@
+.hero {
+    max-height: 450px;
+    overflow: hidden;
+    width: 100%;
+
+    & canvas {
+        display: block;
+        width: 100%;
+    }
+
+    & img {
+        @include bp(tablet) {
+            max-height: 300px;
+        }
+
+        @include bp(mobile) {
+            max-height: 200px;
+        }
+    }
+
+    &-banner {
+        background-color: rgba($blk,.4);
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+
+        & h1 {
+            margin: 0;
+            padding: 10px 0;
+        }
+    }
+}

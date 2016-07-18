@@ -1,0 +1,55 @@
+.enquiry {
+    background-color: #eff2f4;
+    height: 100%;
+    overflow: hidden;
+    padding: 25px 0;
+
+    .three-col {
+        padding: 0 5px;
+        .button-lrg {
+            min-width: 100%;
+
+            @include bp(mobile) {
+                min-width: 290px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &-main {
+        @extend .enquiry;
+        height: 100%;
+        & h5 {
+            text-align: center;
+        }
+        .button-lrg {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .button-lrg {
+        margin: 0 auto;
+    }
+
+    .right {
+        margin: 0;
+        text-align: right;
+        width: 100%;
+    }
+
+    &-highlight {
+        color: $grn;
+        font-weight: bold;
+    }
+
+    & p, h4 {
+        margin: 0;
+    }
+
+    &-tab-text {
+        @include bp(tablet) {
+            font-size: 80%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+textarea, input, select {
+    border: 1px solid $bgry;
+    border-radius: 3px;
+    display: block;
+    font-family: inherit;
+    font-size: 18px;
+    max-width: 40em;
+    margin: 0 10px 15px 0;
+    padding: 10px;
+    width: 100%;
+    
+    &:hover, :focus, :active {
+        border-color: $org;
+    }
+}
+
+textarea {
+    resize: vertical;
+}

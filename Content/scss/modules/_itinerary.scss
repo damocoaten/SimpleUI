@@ -1,0 +1,122 @@
+.itinerary {
+
+    &-dur {
+        margin: 0;
+    }
+
+    &-high {
+        color: $org;
+    }
+
+    &-list {
+        background: url('../images/tick.png') no-repeat 0 5px;
+        padding-left: 25px;
+        & p {
+            margin: 0;
+        }
+    }
+
+    &-table {
+        font-size: 18px;
+        margin-bottom: $let*1em;
+        width: 100%;
+
+        tr:first-child {
+            @include bp(mobile) {
+                display: none;
+            }
+        }
+
+        tr:nth-child(even) {
+            background: lighten($primary, 40%);
+            border-radius: $let*2em 0 0 $let*2em;
+            float: left;
+            width: 100%;
+
+            @include bp(mobile) {
+                border-radius: 3px 3px 0 0;
+            }
+        }
+
+        tr:nth-child(odd) {
+            background: $w;
+            border-radius: $let*2em 0 0 $let*2em;
+            float: left;
+            width: 100%;
+
+            @include bp(mobile) {
+                border-radius: 3px 3px 0 0;
+            }
+
+            .theDay {
+                border-color: lighten($primary, 40%);
+            }
+        }
+    }
+}
+
+.tr-even, .tr-odd {
+    border-radius: $let*2em 0 0 $let*2em;
+    float: left;
+    width: 100%;
+
+    @include bp(mobile) {
+        border-radius: 3px 3px 0 0;
+    }
+}
+
+.tr-odd {
+    background: $w;
+
+    .theDay {
+        border-color: lighten($primary, 40%);
+    }
+}
+
+.tr-even {
+    background: lighten($primary, 40%);
+}
+
+.th-space, .theDay {
+    width: 10%;
+}
+
+th, td {
+    float: left;
+    padding: $let*.5em $let*1em;
+    width: 30%;
+    text-align: left;
+
+    &[colspan="2"] {
+        width: 60%;
+    }
+
+    &[colspan="3"] {
+        width: 90%;
+    }
+
+    @include bp(mobile) {
+        width: 100% !important;
+    }
+}
+
+.theDay {
+    border: 3px solid $w;
+    border-radius: $let*2em;
+    height: 5em;
+    padding: 1.6em 0 0;
+    text-align: center;
+    width: 10%;
+
+    @include bp(mobile) {
+        border-radius: 0;
+        border-width: 0 0 1px;
+        height: auto;
+        padding: $let*.5em $let*1em;
+        width: 100%;
+    }
+}
+
+.daySpace {
+    width: 10%;
+}
